@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@300;600;700&display=swap");
+
+:root {
+    --primary: hsl(223, 87%, 63%);
+    --gray: hsl(0, 0%, 59%);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Libre Franklin", sans-serif;
+}
+
+/* ios input shadow bug fixed */
+input[type="input"],
+input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+h1,
+p {
+    font-weight: 300;
+    color: var(--gray);
+}
+
+img {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: var(--primary);
+}
+
+li {
+    list-style: none;
+}
+
+/* Container */
+
+.container {
+    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.container-flex {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Header */
+
+header .logo {
+    margin-top: 2.5em;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+header .logo span {
+    color: var(--primary);
+}
+
+header .header-title {
+    font-size: 2.5rem;
+}
+
+header .header-title span {
+    font-weight: 700;
+    color: black;
+}
+
+header .header-subtitle {
+    font-weight: 400;
+    color: black;
+}
+
+header .email-form {
+    display: flex;
+    margin-top: 1em;
+    max-width: 550px;
+    width: 90%;
+}
+
+header .email-form .email-input {
+    flex-grow: 2;
+    padding: 0 2em;
+    border-radius: 2em;
+    border: 1px solid hsla(223, 87%, 63%, 0.2);
+}
+
+header .email-form .email-input::placeholder {
+    color: var(--gray);
+    opacity: 0.5;
+    font-size: 0.825rem;
+}
+
+header .email-form .cta-btn {
+    margin-left: 1.5em;
+    padding: 0.825em 3em;
+    border-radius: 3em;
+    color: white;
+    background: var(--primary);
+}
+
+/* Body */
+
+.body-image {
+    margin: 4em 0;
+}
+
+/* Footer */
+
+footer {
+    margin: 1.5em 0;
+}
+
+footer .social {
+    max-width: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer .social i {
+    color: var(--primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 1px solid hsla(223, 87%, 63%, 0.2);
+    height: 50px;
+    width: 50px;
+}
+
+footer .social i:hover {
+    border: 1px solid hsla(223, 87%, 63%, 0);
+    background-color: var(--primary);
+    color: white;
+}
+
+/* Media */
+
+@media (max-width: 750px) {
+    img {
+        width: 85%;
+    }
+
+    header .header-title {
+        font-size: 2rem;
+    }
+
+    header .email-form {
+        flex-direction: column;
+    }
+
+    header .email-form .email-input {
+        height: 4em;
+    }
+
+    header .email-form .cta-btn {
+        margin-top: 1em;
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    p {
+        font-size: 0.825rem;
+    }
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    header .header-title {
+        font-size: 1.5rem;
+        margin-top: 1em;
+    }
+
+    footer .copyright {
+        font-size: 0.825rem;
+    }
+}
+
+@media (max-width: 349px) {
+    header .logo {
+        font-size: 1rem;
+    }
+
+    header .header-title {
+        font-size: 1.4rem;
+        margin-top: 1em;
+    }
+
+    footer .copyright {
+        font-size: 0.825rem;
+    }
+}
